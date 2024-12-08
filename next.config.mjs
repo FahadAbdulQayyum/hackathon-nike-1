@@ -1,4 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
+import { defineConfig } from 'next';
 
-export default nextConfig;
+export default defineConfig({
+  reactStrictMode: true,
+
+  // Ensure these configurations for Vercel deployment
+  output: 'standalone',  // This is crucial for Vercel to work smoothly with your build
+});
